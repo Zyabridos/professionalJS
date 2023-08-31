@@ -5,16 +5,12 @@
 // Перед подсчетом их нужно приводить в нижний регистр, чтобы не пропускались дубли.
 import _ from 'lodash';
 
-function countWords(sentance) {
+function countWords(sentence) {
+  const words = _.words(sentence);
   const result = {};
-  const splitedSentance = sentance.split(' ');
-  const sentanceToLowerCase = (_.words(sentance.toLowerCase()));
-  for (const word of sentanceToLowerCase) {
-    if (Object.hasOwn(result, word)) {
-      result[word] += 1;
-    } else {
-      result[word] = 1;
-    }
+  for (const word of words) {
+    const lowerWord = word.toLowerCase();
+    result[lowerWord] = (result[lowerWord] ?? 0) + 1;
   }
 
   return result;
@@ -22,7 +18,7 @@ function countWords(sentance) {
 
 export default countWords;
 
-// const text1 = 'one two three two ONE one wow';
-// const text2 = 'another one sentence with strange Words words';
-// console.log(countWords(text1));
-// console.log(countWords(text2));
+const text1 = 'one two three two ONE one wow';
+const text2 = 'another one sentence with strange Words words';
+console.log(countWords(text1));
+console.log(countWords(text2));
