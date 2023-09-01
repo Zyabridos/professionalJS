@@ -18,6 +18,4 @@ function getDomainInfo(websiteName) {
   return domainInfo;
 }
 
-console.log(getDomainInfo('yandex.ru'));
-console.log(getDomainInfo('https://yandex.ru'));
-console.log(getDomainInfo('google.com'));
+export default getDomainInfo;
