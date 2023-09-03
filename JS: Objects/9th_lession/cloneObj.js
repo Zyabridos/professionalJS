@@ -1,14 +1,17 @@
 // Реализуйте и экспортируйте по умолчанию функцию,
 // которая выполняет поверхностное копирование объектов.
+// Реализуйте этот функционал самостоятельно, не используя функцию Object.assign().
 
 function cloneShallow(obj) {
-  let result = {};
+  const result = {};
   const entries = Object.entries(obj);
   for (const [key, value] of entries) {
-    result = { key: value };
+    result[key] = value;
   }
   return result;
 }
+
+export default cloneShallow;
 
 const data = {
   key: 'value',

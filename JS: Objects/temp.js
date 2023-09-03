@@ -1,13 +1,4 @@
-function findKey(obj, predica) {
-  Object.keys(obj)
-    .find((key) => predica(obj[key], key, obj));
-}
-
-const data = {
-  user: 'ubuntu',
-  cores: 4,
-  os: 'linux',
-};
-
-console.log(findKey(data, ['user'])); // { user: 'ubuntu' }
-console.log(findKey(data, ['os', 'user'])); // { os: 'linux', user: 'ubuntu' }
+const obj1 = { a: { a: 1 } };
+const obj2 = { a: { b: 1 } };
+Object.assign(obj1, obj2);
+console.log(obj1);

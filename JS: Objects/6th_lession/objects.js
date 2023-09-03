@@ -29,6 +29,5 @@ const data = {
 console.log(pick(data, ['user'])); // { user: 'ubuntu' }
 console.log(pick(data, ['os', 'user'])); // { os: 'linux', user: 'ubuntu' }
 console.log(pick(data, [])); // {}
-// // Если такого свойства нет в исходных данных,
-// // то оно игнорируется
+// // Если такого свойства нет в исходных данных, то оно игнорируется
 console.log(pick(data, ['none', 'cores'])); // { cores: 4 }
