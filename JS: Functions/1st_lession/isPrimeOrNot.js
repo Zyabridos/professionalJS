@@ -22,4 +22,9 @@ function isPrime(n) {
   return true;
 }
 
-console.log(isPrime(5));
+function sayPrimeOrNot(n) {
+  const text = isPrime(n) ? 'yes' : 'no';
+  console.log(text);
+}
+
+sayPrimeOrNot(4); // 'no'
