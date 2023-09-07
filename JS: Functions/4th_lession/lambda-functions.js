@@ -14,15 +14,15 @@ function run(text) {
     }
 
     return result.join('');
-  };
+  }
   return takeLast(text, 4);
-};
+}
 
 export default run;
 
-console.log(run(''));       // null
-console.log(run('cb'));     // null
-console.log(run('power'));  // rewo
+console.log(run('')); // null
+console.log(run('cb')); // null
+console.log(run('power')); // rewo
 console.log(run('hexlet')); // telx
 
 // function sum(a, b) {

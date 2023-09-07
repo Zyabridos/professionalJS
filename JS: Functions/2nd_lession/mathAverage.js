@@ -4,7 +4,7 @@
 
 import _ from 'lodash';
 
-function average ( ...numbers) {
+function average(...numbers) {
   const count = numbers.length;
 
   if (count === 0) {
@@ -14,7 +14,7 @@ function average ( ...numbers) {
   return _.sum(numbers) / count;
 }
 
-export default average
+export default average;
 
 // average(0); // 0
 // average(0, 10); // 5
