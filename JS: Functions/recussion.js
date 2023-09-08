@@ -4,9 +4,7 @@
 // Например: begin = 2 и end = 6 дают нам такую последовательность 2, 3, 4, 5, 6.
 // Сумма такой последовательности будет: 20.
 
-// @ts-check
-
-const sequenceSum = (begin, end) => {
+function sequenceSum(begin, end) {
   if (begin > end) {
     return NaN;
   }
@@ -14,7 +12,7 @@ const sequenceSum = (begin, end) => {
     return begin;
   }
   return begin + sequenceSum(begin + 1, end);
-};
+}
 
 export default sequenceSum;
 
