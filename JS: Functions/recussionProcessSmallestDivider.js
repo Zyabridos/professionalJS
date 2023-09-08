@@ -7,21 +7,23 @@
 
 // Например, наименьший делитель числа 15 это 3.
 
-// const factorial = (n) => {
-//   if (n === 0) {
-//     return 1;
-//   }
+function smallestDivisor(n) {
+  if (n === 1) {
+    return 1;
+  }
+  function iter(counter) {
+    if (n % counter === 0) {
+      return counter;
+    }
+    return iter(counter + 1);
+  }
 
-//   const iter = (counter, acc) => {
-//     if (counter === 1) {
-//       return acc;
-//     }
-//     return iter(counter - 1, counter * acc);
-//   };
+  return (iter(2));
+}
 
-//   return iter(n, 1);
-// };
+export default smallestDivisor;
 
 console.log(smallestDivisor(16)); // 2
+console.log(smallestDivisor(144)); // 2
 console.log(smallestDivisor(15)); // 3
 console.log(smallestDivisor(17)); // 17
