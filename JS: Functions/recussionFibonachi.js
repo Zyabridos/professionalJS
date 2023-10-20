@@ -12,7 +12,7 @@ function fib(n) {
 
 export default fib;
 
-console.log(fib(1)); // 2
-console.log(fib(2)); // 5
-console.log(fib(3)); // 55
-console.log(fib(10)); // 610
+console.log(fib(1)); // 1
+console.log(fib(2)); // 1
+console.log(fib(3)); // 2
+console.log(fib(10)); // 55

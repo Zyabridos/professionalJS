@@ -1,6 +1,3 @@
-import _ from 'lodash';
-
-// BEGIN (write your solution here)
 const getMenCountByYear = (users) => {
   const maleUsers = users.filter((user) => user.gender === 'male');
 
